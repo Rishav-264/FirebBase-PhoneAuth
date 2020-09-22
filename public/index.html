@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+      <h1>Enter Phone Number</h1>
+    <form>
+        <input type="text" id="number" placeholder="+919830042083">
+        <div id="recaptcha-container"></div>
+        <button type='button' id="sign-in" onclick="phoneAuth();">Send Code</button>
+    </form>
+    <br>
+    <h1>Enter Code</h1>
+    <form>
+        <input type="text" id="verifyCode" placeholder="123456">
+        <button type='button' onclick="codeVerify();">Verify Code</button>
+    </form>
+
+    <!-- Add a container for reCaptcha -->
+    <div id="recaptcha-container"></div>
+
+    <!-- Add the latest firebase dependecies from CDN -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBGJ0eTY65OKe6VARR_-FGPfZ0uEvQb0W4",
+        authDomain: "testapp-1dd88.firebaseapp.com",
+        databaseURL: "https://testapp-1dd88.firebaseio.com",
+        projectId: "testapp-1dd88",
+        storageBucket: "testapp-1dd88.appspot.com",
+        messagingSenderId: "1033042392176",
+        appId: "1:1033042392176:web:4d28e71f4254c380b730b5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="auth.js"></script>
+  </body>
+</html>
